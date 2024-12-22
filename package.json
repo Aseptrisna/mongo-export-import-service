@@ -1,0 +1,28 @@
+{
+  "name": "service.export-import.mongo",
+  "version": "1.0.0",
+  "description": "Service untuk export dan Import MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start",
+    "export": "node export.js",
+    "import": "node import.js",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Mongo",
+    "DB",
+    "Node",
+    "Js",
+    "Express"
+  ],
+  "author": "Asep Trisna Setiawan., M.T.",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fs-extra": "^11.2.0",
+    "mongoose": "^8.9.2",
+    "node-schedule": "^2.1.1",
+    "nodemon": "^3.1.9"
+  }
+}
