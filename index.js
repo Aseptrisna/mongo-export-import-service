@@ -21,10 +21,10 @@ async function runExportAndImport() {
     console.log(`[${new Date().toISOString()}] Menjalankan proses ekspor dan impor...`);
 
     try {
-        await exportCollections();
-        console.log('Proses ekspor selesai. Melanjutkan ke proses impor...');
-        // await importCollections();
-        // console.log(`[${new Date().toISOString()}] Proses ekspor dan impor selesai.`);
+        // await exportCollections();
+        // console.log('Proses ekspor selesai. Melanjutkan ke proses impor...');
+        await importCollections();
+        console.log(`[${new Date().toISOString()}] Proses ekspor dan impor selesai.`);
     } catch (err) {
         console.error(`[${new Date().toISOString()}] Terjadi kesalahan:`, err);
     }
