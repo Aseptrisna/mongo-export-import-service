@@ -8,7 +8,7 @@ const targetUri = process.env.MONGO_IMPORT;
 const today = new Date();
 const formattedDate = today.toISOString().split('T')[0];
 
-const inputDir = path.join(__dirname, 'backup', formattedDate);
+const inputDir = path.join(__dirname, 'backup/siap', formattedDate);
 
 async function importCollections() {
     try {
@@ -25,10 +25,10 @@ async function importCollections() {
                 const collectionName = path.basename(file, '.json');
                 console.log(`Mengimpor koleksi: ${collectionName}`);
                 let data = await fs.readJson(path.join(inputDir, file));
-                // Hapus field _id jika ada
+                // Hapus field id jika ada
                 data = data.map(doc => {
-                    const { _id, ...rest } = doc; // Hapus _id
-                    return rest; // Kembalikan dokumen tanpa _id
+                    const { _id, ...rest } = doc; // Hapus id
+                    return rest; // Kembalikan dokumen tanpa id
                 });
                 const collection = mongoose.connection.db.collection(collectionName);
 

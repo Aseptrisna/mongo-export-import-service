@@ -7,7 +7,7 @@ const uri = process.env.MONGO_EXPORT;
 const today = new Date();
 const formattedDate = today.toISOString().split('T')[0];
 
-const outputDir = path.join(__dirname, 'backup', formattedDate);
+const outputDir = path.join(__dirname, 'backup/siap', formattedDate);
 
 async function exportCollections() {
     try {

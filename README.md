@@ -10,7 +10,7 @@
 - Mengimpor data JSON ke MongoDB.
 - Direktori backup otomatis berdasarkan tanggal (`backup/YYYY-MM-DD`).
 - Menghapus data lama sebelum memasukkan data baru.
-- Menghapus field `_id` secara otomatis saat impor.
+- Menghapus field `id` secara otomatis saat impor.
 
 ---
 
